@@ -56,8 +56,14 @@ def calculate_shipping_cost(weight, destination):
 
 
 # This method uses funky logic. Rewrite it using different loop structures
+#def curve_scores(scores):
+ #   return list(map(lambda x: min(x + 5, 100), scores))
+
 def curve_scores(scores):
-    return list(map(lambda x: min(x + 5, 100), scores))
+    curved = []
+    for x in scores:
+        curved.append(x * 1.05)
+    return curved
 
 
 # For scenario three change the name of this method.
@@ -75,8 +81,8 @@ def _validate_imput(text_value):
     return valud_imput
 
 
-def process_user_data():
-    return _validote_imput
+def process_user_data(user_input):
+    return _validate_imput
 
 
 def main():
