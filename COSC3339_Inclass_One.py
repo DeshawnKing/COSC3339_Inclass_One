@@ -11,6 +11,7 @@ branches to simulate merge conflicts.
 """
 
 import math
+import random
 
 # This method contains a bug. In your commit note, state the bug and how you fixed it
 def calculate_hypotenuse(side_a, side_b):
@@ -56,8 +57,18 @@ def calculate_shipping_cost(weight, destination):
 
 
 # This method uses funky logic. Rewrite it using different loop structures
+#def curve_scores(scores):
+  #  return list(map(lambda x: min(x + 5, 100), scores))
 def curve_scores(scores):
-    return list(map(lambda x: min(x + 5, 100), scores))
+    curved = []
+    i = 0
+    random_number = random.randint(1, 10)
+
+
+    while i < len(scores):
+        curved.append(scores[i] + random_number)
+        i += 1
+    return curved
 
 
 # For scenario three change the name of this method.
@@ -76,7 +87,7 @@ def _validate_imput(text_value):
 
 
 def process_user_data():
-    return _validote_imput
+    return _validate_imput
 
 
 def main():
@@ -114,7 +125,7 @@ def main():
 
 print("--- SCENARIO 3 TEST ---")
 user_input = "This is some fake user data"
-if process_user_data(user_input):
+if process_user_data():
     print("Data processed successfully")
 else:
     print("Data invalid")
