@@ -74,13 +74,20 @@ def curve_scores(SCORES):
 def _validate_imput(TEXT_VALUE):
     VALUD_IMPUT = True
 
-    if TEXT_VALUE is None:
-        VALUD_IMPUT = False
+    valid_input = True 
+    
+    if text_value is None:
+        valid_input = False
+    
+    if text_value == "":
+        valid_input = False
+        
+    return valid_input
 
     if TEXT_VALUE == "":
-        VALUD_IMPUT = False
+        valid_input = False
 
-    return VALUD_IMPUT
+    return valid_input
 
 
 def process_user_data(USER_INPUT):
