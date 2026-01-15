@@ -85,9 +85,9 @@ def _validate_imput(TEXT_VALUE):
     return valid_input
 
     if TEXT_VALUE == "":
-        VALUD_IMPUT = False
+        valid_input = False
 
-    return VALUD_IMPUT
+    return valid_input
 
 
 def process_user_data(USER_INPUT):
